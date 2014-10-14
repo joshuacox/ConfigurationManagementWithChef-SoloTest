@@ -104,7 +104,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
      chef.add_recipe "chef-dotdeb"
      chef.add_recipe "apache2"
      chef.add_recipe "apache2::mod_php5"
-     chef.add_recipe "demoapp::default"
+     chef.add_recipe "wpblog"
    end
 
   # Enable provisioning with chef server, specifying the chef server URL,
