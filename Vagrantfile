@@ -99,10 +99,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   #   chef.json = { mysql_password: "foo" }
   # end
    config.vm.provision "chef_solo" do |chef|
-     chef.add_recipe "apt"
-     chef.add_recipe "chef-dotdeb"
-     chef.add_recipe "apache2"
-     chef.add_recipe "apache2::mod_php5"
+     #chef.add_recipe "apt"
+     #chef.add_recipe "chef-dotdeb"
+     #chef.add_recipe "apache2"
+     #chef.add_recipe "apache2::mod_php5"
      chef.add_recipe "wpblog"
    end
 
