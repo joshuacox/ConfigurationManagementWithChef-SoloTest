@@ -1,1 +1,7 @@
+include_recipe "apt"
 include_recipe "apache2"
+include_recipe "apache2::mod_php5"
+include_recipe "mysql_client"
+include_recipe "mysql_server"
+include_recipe "database::mysql"
+include_recipe "php"

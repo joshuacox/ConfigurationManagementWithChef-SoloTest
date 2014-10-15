@@ -1,3 +1,3 @@
-source "https://api.berkshelf.com"
-cookbook 'apache2', git: 'opscode-cookbooks/apache2.git'
+source "https://supermarket.getchef.com"
+cookbook 'apache2', git: 'https://github.com/opscode-cookbooks/apache2.git'
 cookbook 'wpblog', path: './data/cookbooks/wpblog/'
