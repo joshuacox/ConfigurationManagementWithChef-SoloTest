@@ -99,15 +99,18 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   #   chef.json = { mysql_password: "foo" }
   # end
    config.vm.provision "chef_solo" do |chef|
+     chef.cookbooks_path = "./data/cookbooks"
+     chef.roles_path = "./data/roles"
      #chef.add_recipe "apt"
      #chef.add_recipe "chef-dotdeb"
      #chef.add_recipe "apache2"
      #chef.add_recipe "apache2::mod_php5"
-     chef.add_recipe "wpblog"
+     #chef.add_recipe "wpblog"
+     chef.json.merge!(JSON.parse(File.read("django_app.json")))
    end
 
    config.berkshelf.enabled = true
-   #config.berkshelf.berksfile_path = "<Berksfile_folder_path>"
+   config.berkshelf.berksfile_path = "./data/cookbooks/django_app/Berksfile"
 
   # Enable provisioning with chef server, specifying the chef server URL,
   # and the path to the validation key (relative to this Vagrantfile).
