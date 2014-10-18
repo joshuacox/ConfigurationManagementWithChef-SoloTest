@@ -1,5 +1,5 @@
 django_app Cookbook
-===================
+===============
 TODO: Enter the cookbook description here.
 
 e.g.

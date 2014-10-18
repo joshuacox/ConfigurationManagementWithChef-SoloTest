@@ -84,6 +84,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   #   puppet.manifest_file  = "site.pp"
   # end
 
+   config.berkshelf.enabled = true
+   config.berkshelf.berksfile_path = "./data/cookbooks/django_app/Berksfile"
   # Enable provisioning with chef solo, specifying a cookbooks path, roles
   # path, and data_bags path (all relative to this Vagrantfile), and adding
   # some recipes and/or roles.
@@ -109,8 +111,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
      chef.json.merge!(JSON.parse(File.read("django_app.json")))
    end
 
-   config.berkshelf.enabled = true
-   config.berkshelf.berksfile_path = "./data/cookbooks/django_app/Berksfile"
 
   # Enable provisioning with chef server, specifying the chef server URL,
   # and the path to the validation key (relative to this Vagrantfile).
