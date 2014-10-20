@@ -108,7 +108,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
      #chef.add_recipe "apache2"
      #chef.add_recipe "apache2::mod_php5"
      #chef.add_recipe "wpblog"
-     chef.json.merge!(JSON.parse(File.read("django_app.json")))
+     chef.json.merge!(JSON.parse(File.read("ldap.json")))
    end
 
 
